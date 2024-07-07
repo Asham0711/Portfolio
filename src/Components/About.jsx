@@ -4,10 +4,10 @@ import { FaFileAlt } from 'react-icons/fa';
 
 const About = () => {
   const onButtonClick = () => {
-        const pdfUrl = "Sample.pdf";
+        const pdfUrl = "../assets/Asham_Resume.pdf";
         const link = document.createElement("a");
         link.href = pdfUrl;
-        link.download = "../assets/Asham_Resume.pdf";
+        link.download = "Asham_Resume.pdf";
         document.body.appendChild(link);
         link.click();
         document.body.removeChild(link);
