@@ -1,6 +1,7 @@
 import ashcode from './assets/ashcode.jpg'
 import ashchat from './assets/ashchat.jpg';
 import language from './assets/lang.jpg';
+import portfolio from './assets/portfolio.jpg'
 
 const projects = [
     {
@@ -23,6 +24,15 @@ const projects = [
     },
     {
         id: 3,
+        name: "Md Asham Imad",
+        desc: "My Portfolio Application",
+        image: `${portfolio}`,
+        text: "Developed a portfolio website using React and Tailwind CSS, showcasing personal projects and professional experience in a visually appealing and responsive design. Implemented smooth navigation and interactive elements to enhance user experience. Leveraged Tailwind CSS for efficient styling and maintaining a consistent look across all devices. Ensured optimal performance and accessibility, demonstrating proficiency in modern web development practices. Deployed the website on Netlify, achieving fast load times and high availability. Maintained a clean and modular codebase with Git for version control.",
+        gitlink: "https://github.com/Asham0711/Portfolio",
+        livelink: "https://cheerful-elf-a8f497.netlify.app/",
+    },
+    {
+        id: 4,
         name: "Translate It",
         desc: "Live Language Translator",
         image: `${language}`,
