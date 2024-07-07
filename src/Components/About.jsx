@@ -4,13 +4,20 @@ import { FaFileAlt } from 'react-icons/fa';
 
 const About = () => {
   const onButtonClick = () => {
-        const pdfUrl = "../assets/Asham_Resume.pdf";
-        const link = document.createElement("a");
-        link.href = pdfUrl;
-        link.download = "Asham_Resume.pdf";
-        document.body.appendChild(link);
-        link.click();
-        document.body.removeChild(link);
+        fetch("../assets/Asham_Resume.pdf").then((response) => {
+            response.blob().then((blob) => {
+             
+                // Creating new object of PDF file
+                const fileURL =
+                    window.URL.createObjectURL(blob);
+                     
+                // Setting various property values
+                let alink = document.createElement("a");
+                alink.href = fileURL;
+                alink.download = "../assets/Asham_Resume.pdf";
+                alink.click();
+            });
+        });
     };
   return (
     <div name="About" className='max-w-screen-2xl container mx-auto px-4 md:px-20 my-20'>
