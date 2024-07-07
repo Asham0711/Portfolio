@@ -1,10 +1,11 @@
 import React from 'react';
 import pic from '../assets/profile.jpg'
 import { FaFileAlt } from 'react-icons/fa';
+import resume from '../assets/Asham_Resume.pdf';
 
 const About = () => {
   const onButtonClick = () => {
-        fetch("../assets/Asham_Resume.pdf").then((response) => {
+        fetch(`${resume}`).then((response) => {
             response.blob().then((blob) => {
              
                 // Creating new object of PDF file
@@ -14,7 +15,7 @@ const About = () => {
                 // Setting various property values
                 let alink = document.createElement("a");
                 alink.href = fileURL;
-                alink.download = "../assets/Asham_Resume.pdf";
+                alink.download = `${resume}`;
                 alink.click();
             });
         });
