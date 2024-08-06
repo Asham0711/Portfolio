@@ -57,7 +57,7 @@ const Education = () => {
                             <IoLocationSharp className='text-green-500 hidden md:block' /> Kolkata, India
                         </h1>
                         <p className='flex md:justify-center items-center gap-3'>
-                            <SlCalender className='text-green-500 hidden md:block' /> 2017-2018
+                            <SlCalender className='text-green-500 hidden md:block' /> 2005-2018
                         </p>
                     </div>
                 </li>
