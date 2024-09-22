@@ -120,9 +120,9 @@ const Navbar = () => {
         </div>
         {/* Mobile navbar  */}
         {menu && (
-          <div className="bg-white">
-            <ul className='md:hidden grid grid-cols-3 h-[250px] fixed bottom-0 left-0 right-0 z-50 
-            bg-white items-center justify-center space-y-3 text-xl border-t-4'>
+          <div>
+            <ul className={`md:hidden grid grid-cols-3 h-[250px] fixed bottom-0 left-0 right-0 z-50 
+            ${mode === 'light' ? 'bg-white' : 'bg-[#01212A]'} items-center justify-center space-y-3 text-xl border-t-4`}>
               {navItems.map(({ id, text , tag}) => (
                 <li
                   className={`hover:scale-105 hover:font-bold hover:text-[#e77bfa] duration-200 cursor-pointer ${
