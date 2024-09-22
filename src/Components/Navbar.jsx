@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import pic from '../assets/profile.jpg';
+import { useState } from 'react';
+// import pic from '../assets/profile.jpg';
 import { AiOutlineMenu, AiOutlineProject } from "react-icons/ai";
 import { IoCloseSharp, IoPersonOutline } from "react-icons/io5";
 import { Link } from 'react-scroll';
@@ -53,9 +53,9 @@ const Navbar = () => {
       <div className='max-w-screen-2xl container mx-auto px-4 md:px-20 h-16 shadow-md fixed top-0 right-0 left-0 z-50 bg-white'>
         <div className='flex justify-between items-center h-16'>
           <div className='flex space-x-2'>
-            <img src={pic} className='h-12 w-12 rounded-full' alt="" />
+            {/* <img src={pic} className='h-12 w-12 rounded-full' alt="" /> */}
             <h1 className='font-semibold text-xl cursor-pointer'>
-              Md <span className='text-green-500 text-2xl'>Asham</span> Imad
+              Md <span className='text-[#e77bfa] text-2xl font-bold'>Asham</span> Imad
               <p className='text-sm'>Software Developer</p>
             </h1>
           </div>
@@ -64,8 +64,8 @@ const Navbar = () => {
             <ul className='hidden md:flex space-x-8'>
               {navItems.map(({ id, text }) => (
                 <li
-                  className={`hover:scale-105 hover:font-bold hover:text-green-500 duration-200 cursor-pointer ${
-                    activeTab === text ? 'text-green-500' : ''
+                  className={`hover:scale-105 hover:font-bold hover:text-[#e77bfa] duration-200 cursor-pointer ${
+                    activeTab === text ? 'text-[#e77bfa]' : ''
                   }`}
                   key={id}
                 >
@@ -94,8 +94,8 @@ const Navbar = () => {
             bg-white items-center justify-center space-y-3 text-xl border-t-4'>
               {navItems.map(({ id, text , tag}) => (
                 <li
-                  className={`hover:scale-105 hover:font-bold hover:text-green-500 duration-200 cursor-pointer ${
-                    activeTab === text ? 'text-green-500' : ''
+                  className={`hover:scale-105 hover:font-bold hover:text-[#e77bfa] duration-200 cursor-pointer ${
+                    activeTab === text ? 'text-[#e77bfa]' : ''
                   }`}
                   key={id}
                 >

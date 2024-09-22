@@ -1,7 +1,8 @@
-import React from 'react';
-import pic from '../assets/photo.avif';
-import { FaInstagram, FaLinkedin, FaNodeJs, FaReact, FaTwitter } from "react-icons/fa";
+// import React from 'react';
+import pic from '../assets/Asham.jpg';
+import { FaInstagram, FaLinkedin, FaNodeJs, FaReact} from "react-icons/fa";
 import { FaGithub } from "react-icons/fa";
+import { FaXTwitter } from 'react-icons/fa6';
 import { SiExpress, SiMongodb } from "react-icons/si";
 import { ReactTyped } from 'react-typed';
 
@@ -17,7 +18,7 @@ const Home = () => {
             <div className='flex text-2xl space-x-2 md:text-4xl'>
               <h1>Hello I am a</h1>
               <ReactTyped
-                className="text-green-500 font-bold"
+                className="text-[#e77bfa] font-bold"
                 strings={["Programmer", "Developer", "Coder"]}
                 typeSpeed={40}
                 backSpeed={50}
@@ -37,7 +38,7 @@ const Home = () => {
                 <h1 className="font-bold text-center md:text-left">Available on</h1>
                 <ul className="flex space-x-5">
                   <li>
-                      <a href="https://www.linkedin.com/in/md-asham-imad-926316224?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank">
+                      <a href="https://www.linkedin.com/in/md-asham-imad-926316224/" target="_blank">
                         <FaLinkedin className="text-2xl cursor-pointer hover:scale-110 duration-200" />
                       </a>
                   </li>
@@ -47,8 +48,8 @@ const Home = () => {
                     </a>
                   </li>
                   <li>
-                    <a href="https://x.com/ash7__" target="_blank">
-                      <FaTwitter className="text-2xl cursor-pointer hover:scale-110 duration-200"/>
+                    <a href="https://x.com/asham0711" target="_blank">
+                      <FaXTwitter className="text-2xl cursor-pointer hover:scale-110 duration-200"/>
                     </a>
                   </li>
                   <li>

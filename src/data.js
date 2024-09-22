@@ -1,5 +1,5 @@
 import ashcode from './assets/ashcode.jpg'
-import ashchat from './assets/ashchat.jpg';
+import ashchat from './assets/ashchat.jpg'
 import language from './assets/lang.jpg';
 import portfolio from './assets/portfolio.jpg'
 
