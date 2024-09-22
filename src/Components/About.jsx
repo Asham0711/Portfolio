@@ -1,5 +1,5 @@
 // import React from 'react';
-import pic from '../assets/profile.jpg'
+import pic from '../assets/aboutPic.jpg'
 import { FaFileAlt } from 'react-icons/fa';
 import resume from '../assets/Md_Asham_Imad__Resume.pdf';
 
