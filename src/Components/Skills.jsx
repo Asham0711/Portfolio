@@ -22,7 +22,7 @@ const Skills = () => {
             <div>
                 <h1 className='text-2xl font-bold flex justify-between items-center'>
                     Languages 
-                    <div onClick={() => setLang(!lang)}>
+                    <div onClick={() => setLang(!lang)} className='cursor-pointer'>
                         {lang ? <FaChevronUp className='text-[#e77bfa]'/> :<FaChevronDown className='text-[#e77bfa]' />}
                     </div>
                 </h1>
@@ -82,7 +82,7 @@ const Skills = () => {
             <div>
                 <h1 className='text-2xl font-bold flex justify-between items-center'>
                     FrameWorks & Libraries 
-                    <div onClick={() => setFrame(!frame)}>
+                    <div onClick={() => setFrame(!frame)} className='cursor-pointer'>
                         {frame ? <FaChevronUp className='text-[#e77bfa]'/> :<FaChevronDown className='text-[#e77bfa]' />}
                     </div>
                 </h1>
@@ -142,8 +142,8 @@ const Skills = () => {
             <div>
                 <h1 className='text-2xl font-bold flex justify-between items-center'>
                     Tools
-                    <div onClick={() => setTool(!tool)}>
-                        {tool ? <FaChevronUp className='text-[#e77bfa]'/> :<FaChevronDown className='text-green-500' />}
+                    <div onClick={() => setTool(!tool)} className='cursor-pointer'>
+                        {tool ? <FaChevronUp className='text-[#e77bfa]'/> :<FaChevronDown className='text-[#e77bfa]' />}
                     </div>
                 </h1>
                 {tool && (
@@ -194,7 +194,7 @@ const Skills = () => {
             <div>
                 <h1 className='text-2xl font-bold flex justify-between items-center'>
                     Computer Fundamentals
-                    <div onClick={() => setFund(!fund)}>
+                    <div onClick={() => setFund(!fund)} className='cursor-pointer'>
                         {fund ? <FaChevronUp className='text-[#e77bfa]'/> :<FaChevronDown className='text-[#e77bfa]' />}
                     </div>
                 </h1>
