@@ -2,10 +2,10 @@ import { useState } from 'react'
 import { DiMongodb } from 'react-icons/di'
 import { FaChevronDown, FaChevronUp, FaDatabase, FaGithub, FaOsi } from 'react-icons/fa'
 import { FaCuttlefish, FaJava, FaNodeJs, FaPython, FaReact } from 'react-icons/fa6'
-import { IoGitBranch } from 'react-icons/io5'
+import { IoGitBranch, IoLogoVercel } from 'react-icons/io5'
 import { MdDataObject, MdNetworkCheck } from 'react-icons/md'
 import { RiTailwindCssFill } from 'react-icons/ri'
-import { SiExpress, SiJavascript, SiRender, SiVisualstudiocode } from 'react-icons/si'
+import { SiExpress, SiJavascript, SiVisualstudiocode } from 'react-icons/si'
 import { TbBrandCpp } from 'react-icons/tb'
 
 const Skills = () => {
@@ -177,8 +177,8 @@ const Skills = () => {
                         <br />
                         <li>
                             <div className='flex justify-between px-4 font-bold'>
-                                <SiRender className='text-[#e77bfa] text-3xl font-extrabold rounded-md' />
-                                Render
+                                <IoLogoVercel className='text-[#e77bfa] text-3xl font-extrabold rounded-md' />
+                                Vercel
                             </div>
                             <br />
                             <div className='border-2 rounded-sm border-[#e77bfa] border-solid w-full'></div>
