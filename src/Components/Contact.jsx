@@ -1,29 +1,30 @@
-import axios from "axios";
-// import React from "react";
-import { useForm } from "react-hook-form";
-import toast from "react-hot-toast";
+import {toast} from "react-hot-toast";
 import { IoSendSharp } from "react-icons/io5";
 
 function Contact() {
-  const {
-    register,
-    handleSubmit,
 
-    formState: { errors },
-  } = useForm();
+  const submitHandler = async (event) => {
+    event.preventDefault();
+    const formData = new FormData(event.target);
 
-  const onSubmit = async (data) => {
-    const userInfo = {
-      name: data.name,
-      email: data.email,
-      message: data.message,
-    };
-    try {
-      await axios.post("https://getform.io/f/awnggkkb", userInfo);
-      toast.success("Your message has been sent");
-    } catch (error) {
-      console.log(error);
-      toast.error("Something went wrong");
+    formData.append("access_key", "70fafe61-ee0f-4433-a16c-1243e80862f6");
+
+    const object = Object.fromEntries(formData);
+    const json = JSON.stringify(object);
+
+    const res = await fetch("https://api.web3forms.com/submit", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "application/json"
+      },
+      body: json
+    }).then((res) => res.json());
+
+    if (res.success) {
+      toast.success("Thanks for Contacting Us")
+      console.log("Success", res);
+      event.target.reset();
     }
   };
   return (
@@ -36,47 +37,39 @@ function Contact() {
         <div className='border-2 border-[#e77bfa] w-1/12 mx-auto mb-20'></div>
         <div className=" flex flex-col items-center justify-center">
           <form
-            onSubmit={handleSubmit(onSubmit)}
-            // action="https://getform.io/f/raeqjora"
-            // method="POST"
+            onSubmit={submitHandler}
             className="w-96 px-10 py-8 rounded-xl border-2 border-[#e77bfa]"
           >
             <h1 className="text-xl font-semibold mb-4">Send Your Message</h1>
             <div className="flex flex-col mb-4">
               <label className="block text-gray-700">Full Name<span className="text-red-600 font-bold">*</span></label>
               <input
-                {...register("name", { required: true })}
                 className="shadow rounded-lg appearance-none border border-[#e77bfa] py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                 id="name"
                 name="name"
                 type="text"
                 placeholder="Enter your fullname"
               />
-              {errors.name && <span className="text-[#e77bfa]">This field is required</span>}
             </div>
             <div className="flex flex-col mb-4">
               <label className="block text-gray-700">Email Address<span className="text-red-600 font-bold">*</span></label>
               <input
-                {...register("email", { required: true })}
                 className="shadow rounded-lg appearance-none border border-[#e77bfa] py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                 id="email"
                 name="email"
                 type="text"
                 placeholder="Enter your email address"
               />
-              {errors.email && <span className="text-[#e77bfa]">This field is required</span>}
             </div>
             <div className="flex flex-col mb-4">
               <label className="block text-gray-700">Message<span className="text-red-600 font-bold">*</span></label>
               <textarea
-                {...register("message", { required: true })}
                 className="shadow rounded-lg appearance-none border py-2 px-3 border-[#e77bf0] text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                 id="message"
                 name="message"
                 type="text"
                 placeholder="Enter your Query"
               />
-              {errors.message && <span className="text-[#e77bfa]">This field is required</span>}
             </div>
             <button
               type="submit"
