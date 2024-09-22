@@ -1,14 +1,15 @@
 import { useState } from 'react';
 // import pic from '../assets/profile.jpg';
 import { AiOutlineMenu, AiOutlineProject } from "react-icons/ai";
-import { IoCloseSharp, IoPersonOutline } from "react-icons/io5";
+import { IoCloseSharp, IoMoonSharp, IoPersonOutline, IoSunny } from "react-icons/io5";
 import { Link } from 'react-scroll';
 import { FaGraduationCap, FaHome, FaPhone } from 'react-icons/fa';
 import { SiHyperskill } from 'react-icons/si';
 
 const Navbar = () => {
   const [menu, setMenu] = useState(false);
-  const [activeTab, setActiveTab] = useState('Home'); // Initial active tab
+  const [activeTab, setActiveTab] = useState('Home');
+  const [mode, setMode] = useState('light');
 
   const navItems = [
     {
@@ -48,9 +49,24 @@ const Navbar = () => {
     setMenu(false);
   };
 
+  const toggleHandler = () => {
+      if(mode === 'light'){
+        setMode('dark');
+        document.body.style.backgroundColor = '#01212A';
+        document.body.style.color = 'white';
+      }
+      else{
+        setMode('light');
+        document.body.style.backgroundColor = 'white';
+        document.body.style.color = 'black';
+      }
+  }
+
   return (
     <>
-      <div className='max-w-screen-2xl container mx-auto px-4 md:px-20 h-16 shadow-md fixed top-0 right-0 left-0 z-50 bg-white'>
+      <div className={`max-w-screen-2xl container mx-auto px-4 
+        ${mode === 'light' ? 'bg-white' : 'bg-[#01212A]'} md:px-20 h-16 shadow-md 
+        ${mode === 'light' ? 'shadow-slate-400' : 'shadow-slate-500'} fixed top-0 right-0 left-0 z-50`}>
         <div className='flex justify-between items-center h-16'>
           <div className='flex space-x-2'>
             {/* <img src={pic} className='h-12 w-12 rounded-full' alt="" /> */}
@@ -83,8 +99,23 @@ const Navbar = () => {
               ))}
             </ul>
           </div>
-          <div onClick={() => setMenu(!menu)} className="md:hidden z-50">
-            {menu ? <IoCloseSharp size={24} /> : <AiOutlineMenu size={24} />}
+          <div className='flex gap-6 justify-center items-center'>
+            <div onClick={() => setMenu(!menu)} className="md:hidden z-50">
+              {menu ? <IoCloseSharp size={24} /> : <AiOutlineMenu size={24} />}
+            </div>
+            {
+              mode === 'light' ? 
+              (
+                <div className='flex justify-center items-center cursor-pointer'>
+                  <IoMoonSharp className='text-2xl' onClick={toggleHandler}/>
+                </div>
+              ) :
+              (
+                <div className='flex justify-center items-center cursor-pointer'>
+                  <IoSunny className='text-3xl' onClick={toggleHandler}/>
+                </div>
+              )
+            }
           </div>
         </div>
         {/* Mobile navbar  */}

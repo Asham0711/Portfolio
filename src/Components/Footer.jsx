@@ -6,7 +6,7 @@ function Footer() {
   return (
     <>
       <hr/>
-      <footer className="py-12 bg-gradient-to-r from-[#e77bfa] via-[#db66f0] to-[#c906eb]">
+      <footer className="py-12 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500">
         <div className="max-w-screen-2xl container mx-auto px-4 md:px-20">
           <div className=" flex flex-col items-center justify-center">
             <div className="flex space-x-4">

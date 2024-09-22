@@ -74,7 +74,7 @@ const Home = () => {
           <div className="md:w-1/2 flex justify-center md:ml-48 md:mt-20 mt-8 order-1">
             <img
               src={pic}
-              className="rounded-full md:w-[350px] md:h-[350px] hover:scale-125 transition-all duration-1000 cursor-pointer"
+              className="rounded-full w-[150px] h-[150px] md:w-[350px] md:h-[350px] hover:scale-125 transition-all duration-1000 cursor-pointer"
               alt=""
             />
           </div>

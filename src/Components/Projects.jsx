@@ -29,8 +29,8 @@ const Projects = ({projects}) => {
     <div name="Projects" className='max-w-screen-2xl container mx-auto px-6 md:px-20 my-20'>
       <h1 className='text-4xl text-center font-bold mb-2'>Projects</h1>
       <div className='border-2 border-[#e77bfa] w-1/12 mx-auto mb-12 md:mb-36'></div>
-      <div className="flex flex-col w-[85vw] md:w-[700px] bg-white mx-auto items-center
-      mt-10 p-10 transition-all duration-700 hover:shadow-xl rounded-md">
+      <div className="flex flex-col w-[85vw] md:w-[700px] mx-auto items-center
+      mt-10 p-10 transition-all duration-700 shadow shadow-slate-300 rounded-md">
         <Card project={projects[index]} />
         <div className="flex text-3xl mt-5 gap-10 text-[#e77bfa] font-bold mx-auto text-center">
           <button
