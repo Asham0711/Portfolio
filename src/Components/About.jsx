@@ -23,12 +23,12 @@ const About = () => {
   return (
     <div name="About" className='max-w-screen-2xl container mx-auto px-4 md:px-20 my-20'>
       <h1 className='text-4xl text-center font-bold mb-2'>About</h1>
-      <div className='border-2 border-[#e77bfa] w-1/12 mx-auto mb-20'></div>
+      <div className='border-2 border-[#e77bfa] w-1/12 mx-auto md:mb-20'></div>
       <br />
       <br />
-      <div className='flex flex-col gap-5 md:flex-row justify-between space-x-5 md:px-20'>
+      <div className='flex flex-col gap-8 md:flex-row justify-between space-x-5 md:px-20'>
         <div className='md:w-1/2 w-full px-20'>
-          <img src={pic} alt="" className='md:w-[350px] w-full h-full rounded-2xl hover:scale-110 duration-1000 transition-all cursor-pointer' />
+          <img src={pic} alt="" className='md:w-[350px] w-full h-full rounded-2xl md:hover:scale-110 duration-1000 transition-all cursor-pointer' />
         </div>
         <div className='md:w-1/2 flex flex-col justify-center gap-5 items-center'>
           <p className='md:text-xl'>
